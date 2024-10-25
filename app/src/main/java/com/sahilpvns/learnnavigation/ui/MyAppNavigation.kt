@@ -9,7 +9,9 @@ import androidx.navigation.compose.rememberNavController
 fun MyAppNavigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Routes.SCREEN_A) {
-        composable(Routes.SCREEN_A) { ScreenA(navController) }
+        composable(Routes.SCREEN_A) {
+            ScreenA(navController)
+        }
 
         composable(Routes.SCREEN_B + "/{name}") {
             val name = it.arguments?.getString("name")
